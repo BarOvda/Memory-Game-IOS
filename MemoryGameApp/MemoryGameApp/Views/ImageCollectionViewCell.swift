@@ -1,9 +1,4 @@
-//
-//  ImageCollectionViewCell.swift
-//  MemoryGameApp
-//
-//  Created by apple on 7/2/21.
-//
+
 
 import UIKit
 

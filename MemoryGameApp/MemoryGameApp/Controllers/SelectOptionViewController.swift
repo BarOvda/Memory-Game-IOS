@@ -1,9 +1,3 @@
-//
-//  SelectOptionViewController.swift
-//  MemoryGameApp
-//
-//  Created by apple on 7/3/21.
-//
 
 import UIKit
 import CoreLocation
@@ -20,7 +14,7 @@ class SelectOptionViewController: UIViewController,CLLocationManagerDelegate ,UI
         self.txtfName.delegate = self
         self.configureLocation()
       
-        // Do any additional setup after loading the view.
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {

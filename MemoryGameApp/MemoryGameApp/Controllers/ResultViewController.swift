@@ -1,9 +1,3 @@
-//
-//  ResultViewController.swift
-//  MemoryGameApp
-//
-//  Created by apple on 7/3/21.
-//
 
 import UIKit
 

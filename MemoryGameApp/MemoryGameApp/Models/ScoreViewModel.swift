@@ -11,7 +11,7 @@ class ScoreViewModel : NSObject ,NSCoding{
     var playerName : String = ""
     var lat : Double = 0.0
     var lng  : Double = 0.0
-    //var location : CLLocationCoordinate2D = CLLocationCoordinate2D()
+    
     
     override init() {
         self.playerTime  = ""
@@ -19,7 +19,7 @@ class ScoreViewModel : NSObject ,NSCoding{
         self.playerName  = ""
         self.lat = 0.0
         self.lng = 0.0
-      //  self.location = CLLocationCoordinate2D()
+      
       
     }
     
@@ -29,7 +29,7 @@ class ScoreViewModel : NSObject ,NSCoding{
         aCoder.encode(playerMoves, forKey: "playerMoves")
         aCoder.encode(lat, forKey: "lat")
         aCoder.encode(lng, forKey: "lng")
-        //aCoder.encode(self.location, forKey: "location")
+        
         aCoder.encode(self.playerName, forKey: "playerName")
        
     }
@@ -41,7 +41,7 @@ class ScoreViewModel : NSObject ,NSCoding{
         playerName = aDecoder.decodeObject(forKey: "playerName") as? String ?? ""
         lat = aDecoder.decodeDouble(forKey: "lat")
         lng = aDecoder.decodeDouble(forKey: "lng")
-       // location = aDecoder.decodeObject(forKey: "location") as? CLLocationCoordinate2D ?? CLLocationCoordinate2D()
+       
         
     }
 }

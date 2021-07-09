@@ -20,7 +20,6 @@ class TopTenScoreViewController: UIViewController,CLLocationManagerDelegate,MKMa
         self.configureLocation()
         self.loadScore()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func actionBack(_ sender: Any) {
@@ -49,7 +48,7 @@ class TopTenScoreViewController: UIViewController,CLLocationManagerDelegate,MKMa
     func configureLocation(){
         self.locationManager.requestAlwaysAuthorization()
 
-            // For use in foreground
+
             self.locationManager.requestWhenInUseAuthorization()
 
             if CLLocationManager.locationServicesEnabled() {
@@ -99,14 +98,6 @@ class TopTenScoreViewController: UIViewController,CLLocationManagerDelegate,MKMa
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
