@@ -15,6 +15,10 @@
 		187576DF268E632100281469 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187576DE268E632100281469 /* ImageCollectionViewCell.swift */; };
 		18BF97C72690D72B002888AC /* SelectOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF97C62690D72B002888AC /* SelectOptionViewController.swift */; };
 		18BF97CA2690D92F002888AC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF97C92690D92F002888AC /* ResultViewController.swift */; };
+		18BF97CD2690DE5E002888AC /* TopTenScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF97CC2690DE5E002888AC /* TopTenScoreViewController.swift */; };
+		18BF97D02690E2DD002888AC /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF97CF2690E2DD002888AC /* ScoreViewModel.swift */; };
+		18BF97D32690E3B0002888AC /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF97D22690E3B0002888AC /* LocalStorage.swift */; };
+		18BF97D62690E805002888AC /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF97D52690E805002888AC /* RecordTableViewCell.swift */; };
 		18BF9825269229F9002888AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF9824269229F8002888AC /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		187576DE268E632100281469 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		18BF97C62690D72B002888AC /* SelectOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionViewController.swift; sourceTree = "<group>"; };
 		18BF97C92690D92F002888AC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		18BF97CC2690DE5E002888AC /* TopTenScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenScoreViewController.swift; sourceTree = "<group>"; };
+		18BF97CF2690E2DD002888AC /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
+		18BF97D22690E3B0002888AC /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		18BF97D52690E805002888AC /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		18BF9824269229F8002888AC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +70,8 @@
 		187576C7268E625900281469 /* MemoryGameApp */ = {
 			isa = PBXGroup;
 			children = (
+				18BF981E26922944002888AC /* User Defaults */,
+				18BF981D2692293E002888AC /* Models */,
 				18BF981C26922936002888AC /* Views */,
 				18BF981B2692292A002888AC /* Controllers */,
 				187576C8268E625900281469 /* AppDelegate.swift */,
@@ -80,6 +90,7 @@
 				18BF9824269229F8002888AC /* ViewController.swift */,
 				18BF97C62690D72B002888AC /* SelectOptionViewController.swift */,
 				18BF97C92690D92F002888AC /* ResultViewController.swift */,
+				18BF97CC2690DE5E002888AC /* TopTenScoreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,8 +99,25 @@
 			isa = PBXGroup;
 			children = (
 				187576DE268E632100281469 /* ImageCollectionViewCell.swift */,
+				18BF97D52690E805002888AC /* RecordTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		18BF981D2692293E002888AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18BF97CF2690E2DD002888AC /* ScoreViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18BF981E26922944002888AC /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				18BF97D22690E3B0002888AC /* LocalStorage.swift */,
+			);
+			path = "User Defaults";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +191,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BF9825269229F9002888AC /* ViewController.swift in Sources */,
+				18BF97D32690E3B0002888AC /* LocalStorage.swift in Sources */,
 				18BF97C72690D72B002888AC /* SelectOptionViewController.swift in Sources */,
+				18BF97CD2690DE5E002888AC /* TopTenScoreViewController.swift in Sources */,
 				187576C9268E625900281469 /* AppDelegate.swift in Sources */,
 				187576DF268E632100281469 /* ImageCollectionViewCell.swift in Sources */,
 				187576CB268E625900281469 /* SceneDelegate.swift in Sources */,
 				18BF97CA2690D92F002888AC /* ResultViewController.swift in Sources */,
+				18BF97D62690E805002888AC /* RecordTableViewCell.swift in Sources */,
+				18BF97D02690E2DD002888AC /* ScoreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

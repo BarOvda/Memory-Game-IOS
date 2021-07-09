@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 class ViewController: UIViewController ,UICollectionViewDelegate , UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var lblTime: UILabel!
@@ -14,10 +14,12 @@ class ViewController: UIViewController ,UICollectionViewDelegate , UICollectionV
     @IBOutlet weak var lblMoves: UILabel!
     var imagesArray = ["i1","i2","i3","i4","i5","i6","i7","i8","i6","i2","i3","i1","i5","i8","i7","i4"]
     var movesCount = 0
+    var playerLocation = CLLocationCoordinate2D()
     var timer = Timer()
     var totalSeconds : Float = 0.0
     var currentSelectedCell = [Int]()
     var matchCount = 0
+    var storage = localStorage()
     var playerName = ""
     
     
@@ -84,7 +86,7 @@ class ViewController: UIViewController ,UICollectionViewDelegate , UICollectionV
                 self.matchCount = self.matchCount + 1
                 print(self.matchCount)
                 if(self.matchCount == 8){
-                    self.moveToResultController()
+                    self.saveRecord()
                 }
             }
             else{
@@ -141,7 +143,28 @@ class ViewController: UIViewController ,UICollectionViewDelegate , UICollectionV
         return CGSize(width: self.collectionView.bounds.width / 4, height: self.collectionView.bounds.height / 4)
     }
     
-    
+    func saveRecord(){
+        let newRecord = ScoreViewModel()
+        newRecord.playerName = self.playerName
+        newRecord.playerMoves = self.movesCount
+        newRecord.playerTime = "\(self.totalSeconds)"
+        newRecord.lat = self.playerLocation.latitude
+        newRecord.lng = self.playerLocation.longitude
+      //  newRecord.location = self.playerLocation
+        if(storage.isRecord){
+            var records = self.storage.scoreRecords
+            records?.append(newRecord)
+            self.storage.scoreRecords = records
+           self.moveToResultController()
+        }
+        else{
+          var records = [ScoreViewModel]()
+            records.append(newRecord)
+            self.storage.isRecord = true
+            self.storage.scoreRecords = records
+            self.moveToResultController()
+        }
+    }
 
 }
 

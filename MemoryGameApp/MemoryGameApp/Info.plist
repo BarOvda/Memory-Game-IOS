@@ -49,6 +49,11 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This application requires location services to show your top score on map</string>
+
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>TThis application requires location services to show your top score on map</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
